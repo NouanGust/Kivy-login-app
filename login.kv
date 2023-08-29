@@ -1,0 +1,64 @@
+ScreenManager:
+    LoginScreen:
+        name: 'login'
+    LogadoScreen:
+        name: 'logado'
+
+<LoginScreen@Screen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: 700
+        padding: [40,40,40,40]
+
+
+        MDScreen:
+            md_bg_color: app.theme_cls.accent_color
+            radius: [25, 25, 25, 25]
+            size_hint_x: None
+            size_hint_y: None
+            width: 500
+            height: 500
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+            MDLabel:
+                id: login-label
+                text: "Login"
+                color: (0,0,0)
+                pos_hint: {'center_x': 0.5,'center_y': 0.8}
+                halign: 'center'
+                font_style: 'H1'
+                
+
+            MDTextField:
+                id: username
+                pos_hint: {'center_x': 0.5,'center_y': 0.6}
+                size_hint_x: None
+                mode: "rectangle"
+                hint_text: 'Nome de usuário: '
+                width: 350  
+            
+            MDTextField:
+                id: senha
+                pos_hint: {'center_x': 0.5,'center_y': 0.45}
+                size_hint_x: None
+                mode: "fill"
+                fill_color: 0,0,0,1
+                line_color_normal: app.theme_cls.accent_color
+                hint_text: 'Senha: '
+                width: 350
+
+            MDRectangleFlatButton:
+                id: login-button
+                on_release: app.login()
+                text: 'Login'
+                pos_hint: {'center_x': 0.5,'center_y': 0.3}
+                size_hint_x: None
+                width: 350
+    
+<LogadoScreen@Screen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDLabel:
+            text: 'Logado :)'
