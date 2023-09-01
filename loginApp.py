@@ -14,11 +14,21 @@ class LoginApp(MDApp):
     
     def login(self):
         screen = self.root_window
-        # usermane = self.root.ids.username.text
+        # username = self.root.ids.username.text
         # senha = self.root.ids.senha.text
         # if usermane and senha != '':
         #     self.root.current = 'logado'
         print(self.root.ids.username.text)
+
+    # Método login
+
+    def login(self):
+    username = self.root.get_screen('login').ids.username.text
+    senha = self.root.get_screen('login').ids.senha.text
+    if username and senha:
+        self.root.current = 'logado'
+    else:
+        print("Por favor, insira nome de usuário e senha.")
 
 
 LoginApp().run()
