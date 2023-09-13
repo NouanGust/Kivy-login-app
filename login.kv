@@ -5,6 +5,8 @@ ScreenManager:
         name: 'login'
 
 
+
+
 <LoginScreen@Screen>:
     BoxLayout:
         orientation: 'vertical'
@@ -43,9 +45,7 @@ ScreenManager:
                 id: senha
                 pos_hint: {'center_x': 0.5,'center_y': 0.45}
                 size_hint_x: None
-                mode: "fill"
-                fill_color: 0,0,0,1
-                line_color_normal: app.theme_cls.accent_color
+                mode: "rectangle"
                 hint_text: 'Senha: '
                 width: 350
 
@@ -67,6 +67,7 @@ ScreenManager:
     
 <LogadoScreen@Screen>:
     BoxLayout:
+        id: telaPrincipal
         orientation: 'vertical'
         MDLabel:
             text: "Minhas tarefas"
@@ -74,7 +75,7 @@ ScreenManager:
 
 
         ScrollView:
-            id: telaPrincipal
+
 
             BoxLayout:
                 MDLabel:

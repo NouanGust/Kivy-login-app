@@ -13,7 +13,7 @@ class LoginApp(MDApp):
         self.theme_cls.primary_palette = "DeepPurple"
         self.theme_cls.theme_style = "Dark"
         self.theme_cls.accent_palette = "Teal"
-        self.root.current = 'logado'
+        self.root.current = 'login'
     
         return Builder.load_file('login.kv')
     
@@ -38,8 +38,10 @@ class LoginApp(MDApp):
         tarefaLabel.font_style = "Overline"
     
     def addTarefa(self):
-        tarefa = MDLabel(text="nova tarefa")
-        self.root.get_screen('logado').ids.telaPrincipal.add_widget(tarefa)
+        tarefas = []
+        
+        for tarefa in tarefas:
+            self.root.get_screen('logado').ids.telaPrincipal.add_widget(tarefa)
     
 
 
